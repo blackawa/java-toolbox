@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tools>
+    <tool>
+        <url>https://projects.spring.io/spring-boot/</url>
+        <name>Spring Boot</name>
+        <description lang="en">
+            Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run". We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration.
+        </description>
+        <tags>
+            <tag>WEB_FRAMEWORK</tag>
+        </tags>
+    </tool>
+</tools>
