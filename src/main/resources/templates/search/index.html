@@ -26,7 +26,31 @@
     </nav>
     <section class="section">
         <div class="container">
-            <h1 class="title">Tools for: xxxxxx</h1>
+            <h1 class="title">Tools for: <span th:text="${query}">hoge</span></h1>
+            <div class="notification is-warning" th:if="${tools.isEmpty()}">
+                <p>There are no libraries which fits your query.</p>
+                <p>Why don't you <a href="https://github.com/blackawa/java-toolbox/issues/new">create issue</a> to improve java-toolbox?</p>
+            </div>
+            <table class="table is-fullwidth" th:if="${!tools.isEmpty()}">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>URL</th>
+                    <th>Description</th>
+                    <th>Tags</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="tool : ${tools}">
+                    <td th:text="${tool.name}"></td>
+                    <td><a th:text="${tool.url}" th:href="${tool.url}"></a></td>
+                    <td th:text="${tool.description}"></td>
+                    <td class="tags">
+                        <span class="tag" th:each="tag : ${tool.tags}" th:text="${tag.name}"></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 </div>

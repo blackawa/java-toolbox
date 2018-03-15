@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <tools>
     <tool>
-        <name></name>
-        <url></url>
+        <name>lombok</name>
+        <url>https://projectlombok.org/</url>
         <description></description>
         <tags>
-            <tag></tag>
+            <tag>utils</tag>
         </tags>
     </tool>
 </tools>
