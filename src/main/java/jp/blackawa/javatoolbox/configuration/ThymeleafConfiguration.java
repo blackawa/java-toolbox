@@ -1,4 +1,4 @@
-package jp.blackawa.javatoolbox.web.configuration;
+package jp.blackawa.javatoolbox.configuration;
 
 import nz.net.ultraq.thymeleaf.LayoutDialect;
 import org.springframework.context.annotation.Bean;
