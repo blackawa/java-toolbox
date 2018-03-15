@@ -47,4 +47,8 @@ public class Tool {
                 .orElse(0);
         return new ScoredTool(this, score);
     }
+
+    public boolean hasTag(Tag tag) {
+        return tags.contains(tag);
+    }
 }

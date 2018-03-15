@@ -14,4 +14,15 @@ public class Tag {
     public static Tag fromDom4jElement(Element element) {
         return new Tag(element.getText());
     }
+
+    /**
+     * Only check name equality.
+     *
+     * @param another Another tag to compare equality
+     * @return Comparison result
+     */
+    @Override
+    public boolean equals(Object another) {
+        return (another instanceof Tag) && ((Tag) another).name.equals(name);
+    }
 }

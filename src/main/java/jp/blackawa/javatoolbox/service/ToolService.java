@@ -19,4 +19,8 @@ public class ToolService {
         List<String> queries = Arrays.asList(query.split("\\s"));
         return toolRepository.findByQueries(queries);
     }
+
+    public List<Tool> findByTag(String tagName) {
+        return toolRepository.findByTag(tagName);
+    }
 }
