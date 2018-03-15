@@ -34,7 +34,7 @@
     <section class="section">
         <div class="container">
             <div class="tags" th:if="${!tags.isEmpty()}">
-                <a class="tag" th:each="tag : ${tags}" th:text="${tag.name}" th:href="@{/tags/{tagName}(tagName=${tag.name})}"></a>
+                <a class="tag is-large" th:each="tag : ${tags}" th:text="${tag.name}" th:href="@{/tags/{tagName}(tagName=${tag.name})}"></a>
             </div>
         </div>
     </section>
