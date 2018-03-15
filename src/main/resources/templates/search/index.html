@@ -68,7 +68,7 @@
                     <td><a th:text="${tool.url}" th:href="${tool.url}" target="_blank"></a></td>
                     <td th:text="${tool.description}"></td>
                     <td class="tags">
-                        <span class="tag" th:each="tag : ${tool.tags}" th:text="${tag.name}"></span>
+                        <a class="tag" th:each="tag : ${tool.tags}" th:text="${tag.name}" th:href="@{/tags/{tagName}(tagName=${tag.name})}"></a>
                     </td>
                 </tr>
                 </tbody>

@@ -33,7 +33,7 @@
     </nav>
     <section class="section">
         <div class="container">
-            <h1 class="title">Tools for: <span class="tag" th:text="${tagName}">hoge</span></h1>
+            <h1 class="title">Tools for: <span class="tag is-large" th:text="${tagName}">hoge</span></h1>
             <table class="table is-fullwidth">
                 <thead>
                 <tr>
@@ -49,7 +49,7 @@
                     <td><a th:text="${tool.url}" th:href="${tool.url}" target="_blank"></a></td>
                     <td th:text="${tool.description}"></td>
                     <td class="tags">
-                        <span class="tag" th:each="tag : ${tool.tags}" th:text="${tag.name}"></span>
+                        <a class="tag" th:each="tag : ${tool.tags}" th:text="${tag.name}" th:href="@{/tags/{tagName}(tagName=${tag.name})}"></a>
                     </td>
                 </tr>
                 </tbody>
