@@ -1,7 +1,25 @@
 <!doctype html>
-<html>
-<head></head>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
 <body>
-<h1>Hello from spring</h1>
+<div layout:fragment="content">
+    <section class="hero is-light is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">Search for your best java tools.</h1>
+                <form th:action="@{/search}">
+                    <div class="field">
+                        <div class="control has-icons-right">
+                            <input class="input is-large" type="text" name="query" placeholder="Search for tools...">
+                            <span class="icon is-large is-right"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
 </body>
 </html>
