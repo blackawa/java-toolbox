@@ -27,9 +27,24 @@
     <section class="section">
         <div class="container">
             <h1 class="title">Tools for: <span th:text="${query}">hoge</span></h1>
-            <div class="notification is-warning" th:if="${tools.isEmpty()}">
-                <p>There are no libraries which fits your query.</p>
-                <p>Why don't you <a href="https://github.com/blackawa/java-toolbox/issues/new">create issue</a> to improve java-toolbox?</p>
+            <div th:if="${tools.isEmpty()}">
+                <div class="notification is-warning">
+                    <p>There are no libraries which fits your query.</p>
+                    <p>Why don't you <a href="https://github.com/blackawa/java-toolbox/issues/new">create issue</a> to
+                        improve java-toolbox?</p>
+                </div>
+                <h2 class="title is-4">Or, how about another query?</h2>
+                <form>
+                    <form th:action="@{/search}">
+                        <div class="field">
+                            <div class="control has-icons-right">
+                                <input class="input is-large" type="text" name="query"
+                                       placeholder="Search for tools...">
+                                <span class="icon is-large is-right"><i class="fas fa-search"></i></span>
+                            </div>
+                        </div>
+                    </form>
+                </form>
             </div>
             <table class="table is-fullwidth" th:if="${!tools.isEmpty()}">
                 <thead>
@@ -43,7 +58,7 @@
                 <tbody>
                 <tr th:each="tool : ${tools}">
                     <td th:text="${tool.name}"></td>
-                    <td><a th:text="${tool.url}" th:href="${tool.url}"></a></td>
+                    <td><a th:text="${tool.url}" th:href="${tool.url}" target="_blank"></a></td>
                     <td th:text="${tool.description}"></td>
                     <td class="tags">
                         <span class="tag" th:each="tag : ${tool.tags}" th:text="${tag.name}"></span>
