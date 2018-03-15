@@ -1,0 +1,34 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
+<body>
+<div layout:fragment="content">
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" th:href="@{/}">JAVA TOOLBOX</a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar">
+                    <a class="navbar-item" th:href="@{/}">
+                        <span class="icon"><i class="fas fa-search"></i></span>
+                        <span>Freeword</span>
+                    </a>
+                    <a class="navbar-item" th:href="@{/tags}">
+                        <span class="icon"><i class="fas fa-tags"></i></span>
+                        <span>Tags</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Tools for: xxxxxx</h1>
+        </div>
+    </section>
+</div>
+</body>
+</html>
