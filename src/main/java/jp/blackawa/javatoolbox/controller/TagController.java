@@ -1,8 +1,11 @@
 package jp.blackawa.javatoolbox.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import jp.blackawa.javatoolbox.entity.Tool;
+import jp.blackawa.javatoolbox.exception.NotFoundException;
 import jp.blackawa.javatoolbox.service.TagService;
 import jp.blackawa.javatoolbox.service.ToolService;
 import org.springframework.stereotype.Controller;
@@ -32,7 +35,11 @@ public class TagController {
     @GetMapping("{tagName}")
     public ModelAndView show(@PathVariable("tagName") String tagName) {
         Map<String, Object> params = new HashMap<>();
-        params.put("tools", toolService.findByTag(tagName));
+        List<Tool> tools = toolService.findByTag(tagName);
+        if (tools.isEmpty()) {
+            throw new NotFoundException();
+        }
+        params.put("tools", tools);
         params.put("tagName", tagName);
         return new ModelAndView("tag/show", params);
     }
