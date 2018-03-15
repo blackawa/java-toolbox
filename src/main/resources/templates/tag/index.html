@@ -1,0 +1,43 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
+<body>
+<div layout:fragment="content">
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" th:href="@{/}">JAVA TOOLBOX</a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar">
+                    <a class="navbar-item" th:href="@{/}">
+                        <span class="icon"><i class="fas fa-search"></i></span>
+                        <span>Freeword</span>
+                    </a>
+                    <a class="navbar-item" th:href="@{/tags}">
+                        <span class="icon"><i class="fas fa-tags"></i></span>
+                        <span>Tags</span>
+                    </a>
+                    <span class="navbar-item">
+                        <a class="button is-dark" target="_blank"
+                           href="https://github.com/blackawa/java-toolbox/blob/master/src/main/resources/tools.xml">
+                            <span class="icon"><i class="fab fa-github"></i></span>
+                            <span>Improve tool list</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <div class="tags" th:if="${!tags.isEmpty()}">
+                <a class="tag" th:each="tag : ${tags}" th:text="${tag.name}" th:href="@{/tags/{tagName}(tagName=${tag.name})}"></a>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
