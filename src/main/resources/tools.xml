@@ -24,4 +24,15 @@
             <tag>testing</tag>
         </tags>
     </tool>
+    <tool>
+        <name>dom4j</name>
+        <url>https://dom4j.github.io/</url>
+        <description>
+            Flexible XML framework for Java.
+        </description>
+        <tags>
+            <tag>xml</tag>
+            <tag>xpath</tag>
+        </tags>
+    </tool>
 </tools>
