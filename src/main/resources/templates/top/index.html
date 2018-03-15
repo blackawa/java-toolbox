@@ -6,6 +6,27 @@
 <body>
 <div layout:fragment="content">
     <section class="hero is-light is-fullheight">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" th:href="@{/}">JAVA TOOLBOX</a>
+                    </div>
+                    <div class="navbar-menu">
+                        <div class="navbar">
+                            <a class="navbar-item" th:href="@{/}">
+                                <span class="icon"><i class="fas fa-search"></i></span>
+                                <span>Freeword</span>
+                            </a>
+                            <a class="navbar-item" th:href="@{/tags}">
+                                <span class="icon"><i class="fas fa-tags"></i></span>
+                                <span>Tags</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title is-1">Search for your best java tools.</h1>
