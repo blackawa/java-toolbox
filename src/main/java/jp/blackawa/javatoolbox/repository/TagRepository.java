@@ -17,8 +17,7 @@ public class TagRepository {
 
     public List<Tag> findAll() {
         Element tools = dom4jRepository.findRootElement();
-        List tags = tools.selectNodes("//tool/tags/tag");
-        return ((List<Element>) tags).stream()
+        return ((List<Element>) tools.selectNodes("//tool/tags/tag")).stream()
                 .map(Element::getText)
                 .distinct()
                 .map(s -> new Tag(s))
