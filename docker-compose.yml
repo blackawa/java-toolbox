@@ -1,0 +1,14 @@
+version: '3'
+services:
+  rdb:
+    image: 'postgres:10.1'
+    ports:
+      - '5456:5432'
+    environment:
+      POSTGRES_PASSWORD: 'p@ssw0rd'
+      POSTGRES_USER: 'javatoolbox'
+      POSTGRES_DB: 'javatoolbox'
+    volumes:
+      - rdb-data:/var/lib/postgresql/data
+volumes:
+  rdb-data:
