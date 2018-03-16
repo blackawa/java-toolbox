@@ -9,7 +9,7 @@
             much more.
         </description>
         <tags>
-            <tag>utils</tag>
+            <tag>util</tag>
         </tags>
     </tool>
     <tool>
@@ -21,7 +21,7 @@
             testing.
         </description>
         <tags>
-            <tag>testing</tag>
+            <tag>unit testing</tag>
         </tags>
     </tool>
     <tool>
@@ -33,6 +33,80 @@
         <tags>
             <tag>xml</tag>
             <tag>xpath</tag>
+        </tags>
+    </tool>
+    <tool>
+        <name>MyBatis</name>
+        <url>http://blog.mybatis.org/</url>
+        <description>
+            MyBatis is a Java persistence framework that couples objects with stored procedures or SQL statements using
+            an XML descriptor or annotations.
+            MyBatis is free software that is distributed under the Apache License 2.0.
+            MyBatis is a fork of iBATIS 3.0 and is maintained by a team that includes the original creators of iBATIS.
+        </description>
+        <tags>
+            <tag>ORMapper</tag>
+            <tag>sql</tag>
+            <tag>database</tag>
+        </tags>
+    </tool>
+    <tool>
+        <name>Flyway</name>
+        <url>https://flywaydb.org/</url>
+        <description>
+            Version control for your database.
+            Robust schema evolution across all your environments.
+            With ease, pleasure and plain SQL.
+        </description>
+        <tags>
+            <tag>migration</tag>
+            <tag>sql</tag>
+            <tag>database</tag>
+        </tags>
+    </tool>
+    <tool>
+        <name>Jackson</name>
+        <url>https://github.com/FasterXML/jackson</url>
+        <description>
+            Jackson Project is formerly known as the standard JSON library for Java (or JVM platform in general), or, as
+            the "best JSON parser for Java." Or simply as "JSON for Java." More than that, Jackson is a suite of
+            data-processing tools for Java (and the JVM platform), including the flagship streaming JSON parser /
+            generator library, matching data-binding library (POJOs to and from JSON) and additional data format modules
+            to process data encoded in Avro, BSON, CBOR, CSV, Smile, (Java) Properties, Protobuf, XML or YAML
+        </description>
+        <tags>
+            <tag>json</tag>
+            <tag>csv</tag>
+            <tag>xml</tag>
+            <tag>yaml</tag>
+            <tag>encoder</tag>
+        </tags>
+    </tool>
+    <tool>
+        <name>Hibernate</name>
+        <url>http://hibernate.org/</url>
+        <description>MORE THAN AN ORM, DISCOVER THE HIBERNATE GALAXY</description>
+        <tags>
+            <tag>ORMapper</tag>
+            <tag>sql</tag>
+            <tag>database</tag>
+            <tag>validator</tag>
+            <tag>full-text search</tag>
+            <tag>NoSQL</tag>
+        </tags>
+    </tool>
+    <tool>
+        <name>Swagger</name>
+        <url>https://swagger.io/</url>
+        <description>
+            THE WORLD'S MOST POPULAR API TOOLING
+            Swagger is the world’s largest framework of API developer tools for the OpenAPI Specification(OAS), enabling
+            development across the entire API lifecycle, from design and documentation, to test and deployment.
+        </description>
+        <tags>
+            <tag>API</tag>
+            <tag>documentation</tag>
+            <tag>OpenAPI</tag>
         </tags>
     </tool>
 </tools>
